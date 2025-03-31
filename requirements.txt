@@ -1,5 +1,4 @@
 
-
 holidays==0.48
 matplotlib<=3.10.1
 numpy<=1.24.3           # Same as your local environment, if you like
