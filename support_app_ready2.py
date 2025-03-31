@@ -723,15 +723,19 @@ if st.session_state.show_test_tabs:
                                      use_container_width=True)
                     with col2:
                         st.markdown("### **Error Metrics**")
-                        mae = mean_absolute_error(y_test, y_pred)
-                        rmse = np.sqrt(mean_squared_error(y_test, y_pred))
-                        mape = mean_absolute_percentage_error(y_test, y_pred)
+                        past_predictions = model.predict(Train)
+
+                        # Compute error metrics
+                        mae = mean_absolute_error(y_train, past_predictions)
+                        rmse = np.sqrt(mean_squared_error(y_train, past_predictions))
+                        mape = mean_absolute_percentage_error(y_train, past_predictions)
+
                         st.divider()
-                        st.markdown(f"The Mean absolute error metric **MAE** is: {mae:.2f}")
+                        st.markdown(f"The Mean Absolute Error metric **MAE** is: {mae:.2f}")
                         st.divider()
-                        st.markdown(f"The Root mean squared error metric **RMSE** is: {rmse:.2f}")
+                        st.markdown(f"The Root Mean Squared Error metric **RMSE** is: {rmse:.2f}")
                         st.divider()
-                        st.markdown(f"The Mean absolut percentage error **MAPE** is: {100 * mape:.2f} %")
+                        st.markdown(f"The Mean Absolute Percentage Error **MAPE** is: {100 * mape:.2f} %")
 
                         # >>> STORE METRICS <<<
                         if "model_metrics" not in st.session_state:
