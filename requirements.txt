@@ -10,3 +10,5 @@ statsmodels==0.14.4
 streamlit==1.41.1
 tsdb==0.6.2
 xgboost==3.0.0
+wheel>=0.38.1
+streamlit==1.23.1
