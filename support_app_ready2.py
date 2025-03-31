@@ -25,7 +25,7 @@ import tsdb
 # st.set_page_config(layout="wide")
 # max_width = 400  # your desired pixel width
 
-image = Image.open('/Users/vanthangnguyen/Documents/ML/support_picture.png')
+image = Image.open('support_picture.png')
 col1, col2 = st.columns([0.6, 0.4])
 with col1:
     st.write("""
