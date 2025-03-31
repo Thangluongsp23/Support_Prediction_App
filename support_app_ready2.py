@@ -19,7 +19,7 @@ from prophet import Prophet
 from PIL import Image
 import plotly.graph_objects as go
 import tsdb
-# import plotly.express as px
+import plotly.express as px
 
 
 # st.set_page_config(layout="wide")
