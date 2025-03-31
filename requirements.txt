@@ -1,15 +1,29 @@
 holidays==0.48
 matplotlib==3.10.1
-numpy==1.24.3          # Must be >=1.24 to provide np.bool8 for Plotly
-pandas>=2.0            # >=2.0 is compatible with Py 3.12
-pillow==11.1.0         # Lowercase "pillow" is standard, same version
-plotly==5.13.1         # Modern Plotly that uses np.bool8
+
+# Upgrade numpy so it includes the np.bool8 attribute (required by newer Plotly):
+numpy==1.24.3
+
+# Upgrade pandas to a version that fully supports Python 3.12 (v2+ recommended):
+pandas==2.0.3
+
+# Keep only one Pillow line; use the newer version:
+pillow==11.1.0
+
+# Use a newer Plotly that definitely references np.bool8 and works with numpy>=1.24:
+plotly==5.13.1
+
 prophet==1.1.6
-scikit-learn>=1.3
+
+# scikit-learn 1.2.1 can fail on Python 3.12 (missing distutils).
+# Switch to scikit-learn 1.3+ for Python 3.12 compatibility:
+scikit-learn==1.3.0
+
 statsmodels==0.14.4
 streamlit==1.41.1
 tsdb==0.6.2
 xgboost==3.0.0
-# Ensure modern setuptools/wheel so builds on Py 3.12 don’t break
+
+# Ensure you have modern setuptools/wheel so building on Py 3.12 doesn’t break
 setuptools>=65.5
 wheel>=0.38
