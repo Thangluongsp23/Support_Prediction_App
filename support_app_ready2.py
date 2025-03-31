@@ -37,13 +37,13 @@ with col1:
     """)
 with col2:
     st.image(image, width=600)
-st.markdown(
-    """
-    <style>
-    .main {
-    background-color: #98FB98;}
-    </style>
-    """, unsafe_allow_html=True)
+# st.markdown(
+#     """
+#     <style>
+#     .main {
+#     background-color: #98FB98;}
+#     </style>
+#     """, unsafe_allow_html=True)
 
 st.sidebar.header('Input Data')
 st.sidebar.markdown("""
