@@ -1,0 +1,13 @@
+holidays==0.48
+matplotlib==3.10.1
+numpy==1.23.5
+pandas==1.5.3
+Pillow==9.4.0
+Pillow==11.1.0
+plotly==5.9.0
+prophet==1.1.6
+scikit_learn==1.2.1
+statsmodels==0.14.4
+streamlit==1.41.1
+tsdb==0.6.2
+xgboost==3.0.0
