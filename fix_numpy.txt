@@ -1,0 +1,2 @@
+# This file tries to forcibly reinstall a known good NumPy wheel last.
+--force-reinstall numpy==1.24.3
